@@ -126,6 +126,10 @@
             <!--Pivot item two-->
             <phone:PivotItem Header="{Binding Path=LocalizedResources.OptionsMenu, Source={StaticResource LocalizedStrings}}">
                 <StackPanel Orientation="Vertical">
+                    <toolkit:ToggleSwitch
+                        x:Name="EchoCancellation"
+                        Header="{Binding Path=LocalizedResources.EchoCancellationSetting, Source={StaticResource LocalizedStrings}}">
+                    </toolkit:ToggleSwitch>
                     <Button
                         Grid.Row="3"
                         x:Name="ECCalibratorButton"

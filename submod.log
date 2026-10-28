@@ -1,0 +1,126 @@
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/antlr3'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/antlr3.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/antlr3' failed
+Failed to clone 'submodules/antlr3'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/bcg729'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/bcg729.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/bcg729' failed
+Failed to clone 'submodules/bcg729'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/belle-sip'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/belle-sip.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/belle-sip' failed
+Failed to clone 'submodules/belle-sip'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/cunit'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/cunit.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/cunit' failed
+Failed to clone 'submodules/cunit'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/gsm'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/gsm.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/gsm' failed
+Failed to clone 'submodules/gsm'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/libilbc-rfc3951'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/libilbc-rfc3951.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/libilbc-rfc3951' failed
+Failed to clone 'submodules/libilbc-rfc3951'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/libvpx'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/libvpx.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/libvpx' failed
+Failed to clone 'submodules/libvpx'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/libxml2'...
+fatal: unable to connect to git.gnome.org:
+git.gnome.org[0: 199.232.141.91]: errno=timed out
+
+fatal: clone of 'git://git.gnome.org/libxml2' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/libxml2' failed
+Failed to clone 'submodules/libxml2'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/linphone'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/linphone.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/linphone' failed
+Failed to clone 'submodules/linphone'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/msamr'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/msamr.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/msamr' failed
+Failed to clone 'submodules/msamr'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/msilbc'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/msilbc.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/msilbc' failed
+Failed to clone 'submodules/msilbc'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/mssilk'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/mssilk.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/mssilk' failed
+Failed to clone 'submodules/mssilk'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/mswasapi'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/mswasapi.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/mswasapi' failed
+Failed to clone 'submodules/mswasapi'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/mswebrtc'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/mswebrtc.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/mswebrtc' failed
+Failed to clone 'submodules/mswebrtc'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/mswp8vid'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/mswp8vid.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/mswp8vid' failed
+Failed to clone 'submodules/mswp8vid'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/opus'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/opus.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/opus' failed
+Failed to clone 'submodules/opus'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/polarssl'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/polarssl.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/polarssl' failed
+Failed to clone 'submodules/polarssl'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/speex'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/speex.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/speex' failed
+Failed to clone 'submodules/speex'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/srtp'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/srtp.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/srtp' failed
+Failed to clone 'submodules/srtp'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/zlib'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/zlib.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/zlib' failed
+Failed to clone 'submodules/zlib'. Retry scheduled
+Cloning into 'C:/Users/Vincenzo/Documents/Linphone/submodules/antlr3'...
+fatal: unable to connect to git.linphone.org:
+git.linphone.org[0: 87.98.187.101]: errno=timed out
+
+fatal: clone of 'git://git.linphone.org/antlr3.git' into submodule path 'C:/Users/Vincenzo/Documents/Linphone/submodules/antlr3' failed
+Failed to clone 'submodules/antlr3' a second time, aborting

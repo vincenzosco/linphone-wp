@@ -55,6 +55,7 @@ namespace Linphone.Views
             GSM.IsChecked = _settings.GSM;
             OPUS.IsChecked = _settings.OPUS;
             ISAC.IsChecked = _settings.Isac;
+            EchoCancellation.IsChecked = _settings.EchoCancellation;
         }
 
         /// <summary>
@@ -93,6 +94,7 @@ namespace Linphone.Views
             _settings.GSM = ToBool(GSM.IsChecked);
             _settings.OPUS = ToBool(OPUS.IsChecked);
             _settings.Isac = ToBool(ISAC.IsChecked);
+            _settings.EchoCancellation = ToBool(EchoCancellation.IsChecked);
             _settings.Save();
         }
 

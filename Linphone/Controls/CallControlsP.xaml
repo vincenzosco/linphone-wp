@@ -175,6 +175,9 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -191,10 +194,16 @@
             <TextBlock Text="{Binding MediaEncryption}" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1" Grid.Row="4"/>
             <TextBlock Text="{Binding Path=LocalizedResources.StatICE, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeSmall}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Margin="5" Grid.Column="0" Grid.Row="5"/>
             <TextBlock Text="{Binding ICE}" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1" Grid.Row="5"/>
-            <TextBlock Text="{Binding Path=LocalizedResources.StatReceivedVideoSize, Source={StaticResource LocalizedStrings}}" Visibility="{Binding VideoStatsVisibility}" FontSize="{StaticResource PhoneFontSizeSmall}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Margin="5" Grid.Column="0" Grid.Row="6"/>
-            <TextBlock Text="{Binding ReceivedVideoSize}" Visibility="{Binding VideoStatsVisibility}" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1" Grid.Row="6"/>
-            <TextBlock Text="{Binding Path=LocalizedResources.StatSentVideoSize, Source={StaticResource LocalizedStrings}}" Visibility="{Binding VideoStatsVisibility}" FontSize="{StaticResource PhoneFontSizeSmall}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Margin="5" Grid.Column="0" Grid.Row="7"/>
-            <TextBlock Text="{Binding SentVideoSize}" Visibility="{Binding VideoStatsVisibility}" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1" Grid.Row="7"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.StatLossRate, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeSmall}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Margin="5" Grid.Column="0" Grid.Row="6"/>
+            <TextBlock Text="{Binding LossRate}" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1" Grid.Row="6"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.StatJitter, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeSmall}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Margin="5" Grid.Column="0" Grid.Row="7"/>
+            <TextBlock Text="{Binding Jitter}" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1" Grid.Row="7"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.StatRoundTripDelay, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeSmall}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Margin="5" Grid.Column="0" Grid.Row="8"/>
+            <TextBlock Text="{Binding RoundTripDelay}" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1" Grid.Row="8"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.StatReceivedVideoSize, Source={StaticResource LocalizedStrings}}" Visibility="{Binding VideoStatsVisibility}" FontSize="{StaticResource PhoneFontSizeSmall}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Margin="5" Grid.Column="0" Grid.Row="9"/>
+            <TextBlock Text="{Binding ReceivedVideoSize}" Visibility="{Binding VideoStatsVisibility}" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1" Grid.Row="9"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.StatSentVideoSize, Source={StaticResource LocalizedStrings}}" Visibility="{Binding VideoStatsVisibility}" FontSize="{StaticResource PhoneFontSizeSmall}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Margin="5" Grid.Column="0" Grid.Row="10"/>
+            <TextBlock Text="{Binding SentVideoSize}" Visibility="{Binding VideoStatsVisibility}" Style="{StaticResource PhoneTextSmallStyle}" Grid.Column="1" Grid.Row="10"/>
         </Grid>
 
         <!-- Numeric pad buttons -->

@@ -73,6 +73,10 @@ namespace Linphone.Views
             FirewallPolicy.SelectedItem = _networkSettings.FWPolicy;
 
             Stun.Text = _networkSettings.StunServer;
+            audioPortMin.Text = _networkSettings.AudioPortMin;
+            audioPortMax.Text = _networkSettings.AudioPortMax;
+            videoPortMin.Text = _networkSettings.VideoPortMin;
+            videoPortMax.Text = _networkSettings.VideoPortMax;
 
             List<string> tunnelModes = new List<string>
             {
@@ -105,6 +109,8 @@ namespace Linphone.Views
             _networkSettings.TunnelMode = tunnelMode.SelectedItem.ToString();
             _networkSettings.TunnelServer = tunnelServer.Text;
             _networkSettings.TunnelPort = tunnelPort.Text;
+            CheckAudioPortRange();
+            CheckVideoPortRange();
             _networkSettings.Save();
 
             _chatSettings.VibrateOnIncomingMessage = vibrator.IsChecked;
@@ -115,6 +121,54 @@ namespace Linphone.Views
             _settings.Save();
 
             LinphoneManager.Instance.ConfigureLogger();
+        }
+
+        private const int MinPort = 1024;
+        private const int MaxPort = 65535;
+
+        /// <summary>
+        /// Checks the audio port range entered by the user and stores it if it is valid.
+        /// </summary>
+        /// <returns>A boolean telling whether the entered range is valid</returns>
+        private bool CheckAudioPortRange()
+        {
+            int minPort = 0;
+            int maxPort = 0;
+            if (!int.TryParse(audioPortMin.Text, out minPort)
+                || !int.TryParse(audioPortMax.Text, out maxPort)
+                || (minPort < MinPort)
+                || (maxPort > MaxPort)
+                || (minPort > maxPort))
+            {
+                MessageBox.Show(AppResources.AudioPortRangeError, AppResources.AudioPortRange, MessageBoxButton.OK);
+                return false;
+            }
+            _networkSettings.AudioPortMin = minPort.ToString();
+            _networkSettings.AudioPortMax = maxPort.ToString();
+            return true;
+        }
+
+        /// <summary>
+        /// Checks the video port range entered by the user and stores it if it is valid.
+        /// The range is applied when the application is restarted.
+        /// </summary>
+        /// <returns>A boolean telling whether the entered range is valid</returns>
+        private bool CheckVideoPortRange()
+        {
+            int minPort = 0;
+            int maxPort = 0;
+            if (!int.TryParse(videoPortMin.Text, out minPort)
+                || !int.TryParse(videoPortMax.Text, out maxPort)
+                || (minPort < MinPort)
+                || (maxPort > MaxPort)
+                || (minPort > maxPort))
+            {
+                MessageBox.Show(AppResources.AudioPortRangeError, AppResources.VideoPortRange, MessageBoxButton.OK);
+                return false;
+            }
+            _networkSettings.VideoPortMin = minPort.ToString();
+            _networkSettings.VideoPortMax = maxPort.ToString();
+            return true;
         }
 
         /// <summary>

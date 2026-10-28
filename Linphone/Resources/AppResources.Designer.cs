@@ -178,6 +178,60 @@ namespace Linphone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Max port.
+        /// </summary>
+        public static string AudioPortMax {
+            get {
+                return ResourceManager.GetString("AudioPortMax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Min port.
+        /// </summary>
+        public static string AudioPortMin {
+            get {
+                return ResourceManager.GetString("AudioPortMin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RTP audio port range.
+        /// </summary>
+        public static string AudioPortRange {
+            get {
+                return ResourceManager.GetString("AudioPortRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid port range.
+        /// </summary>
+        public static string AudioPortRangeError {
+            get {
+                return ResourceManager.GetString("AudioPortRangeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RTP video port range.
+        /// </summary>
+        public static string VideoPortRange {
+            get {
+                return ResourceManager.GetString("VideoPortRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Applied after restarting the application.
+        /// </summary>
+        public static string VideoPortRangeRestart {
+            get {
+                return ResourceManager.GetString("VideoPortRangeRestart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Audio settings.
         /// </summary>
         public static string AudioSettingsMenu {
@@ -624,6 +678,15 @@ namespace Linphone.Resources {
         public static string ECCalibrationNotRun {
             get {
                 return ResourceManager.GetString("ECCalibrationNotRun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Echo cancellation.
+        /// </summary>
+        public static string EchoCancellationSetting {
+            get {
+                return ResourceManager.GetString("EchoCancellationSetting", resourceCulture);
             }
         }
         
@@ -1403,6 +1466,24 @@ namespace Linphone.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Jitter:.
+        /// </summary>
+        public static string StatJitter {
+            get {
+                return ResourceManager.GetString("StatJitter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loss rate:.
+        /// </summary>
+        public static string StatLossRate {
+            get {
+                return ResourceManager.GetString("StatLossRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Media encryption:.
         /// </summary>
         public static string StatMediaEncryption {
@@ -1426,6 +1507,15 @@ namespace Linphone.Resources {
         public static string StatReceivedVideoSize {
             get {
                 return ResourceManager.GetString("StatReceivedVideoSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Round-trip time:.
+        /// </summary>
+        public static string StatRoundTripDelay {
+            get {
+                return ResourceManager.GetString("StatRoundTripDelay", resourceCulture);
             }
         }
         

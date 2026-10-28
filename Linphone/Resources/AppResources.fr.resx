@@ -599,6 +599,15 @@ Voulez-vous le reporter aux déveoppeurs ? Cela permet de le corriger plus rapid
   <data name="StatICE" xml:space="preserve">
     <value>Connectivité ICE :</value>
   </data>
+  <data name="StatJitter" xml:space="preserve">
+    <value>Gigue :</value>
+  </data>
+  <data name="StatLossRate" xml:space="preserve">
+    <value>Taux de perte :</value>
+  </data>
+  <data name="StatRoundTripDelay" xml:space="preserve">
+    <value>Temps aller-retour :</value>
+  </data>
   <data name="AccountMenuSubtitle" xml:space="preserve">
     <value>paramètres du compte</value>
   </data>
@@ -667,6 +676,27 @@ Voulez-vous le reporter aux déveoppeurs ? Cela permet de le corriger plus rapid
   </data>
   <data name="UploadingLogs" xml:space="preserve">
     <value>Envoi des logs en cours...</value>
+  </data>
+  <data name="EchoCancellationSetting" xml:space="preserve">
+    <value>Annulation d'écho</value>
+  </data>
+  <data name="AudioPortRange" xml:space="preserve">
+    <value>Plage de ports RTP audio</value>
+  </data>
+  <data name="AudioPortMin" xml:space="preserve">
+    <value>Port min.</value>
+  </data>
+  <data name="AudioPortMax" xml:space="preserve">
+    <value>Port max.</value>
+  </data>
+  <data name="AudioPortRangeError" xml:space="preserve">
+    <value>Plage de ports non valide : les deux valeurs doivent être comprises entre 1024 et 65535, le minimum devant être inférieur ou égal au maximum.</value>
+  </data>
+  <data name="VideoPortRange" xml:space="preserve">
+    <value>Plage de ports RTP vidéo</value>
+  </data>
+  <data name="VideoPortRangeRestart" xml:space="preserve">
+    <value>Appliqué au redémarrage de l'application</value>
   </data>
   <data name="WindowsPhoneStoreAppDescription" xml:space="preserve">
     <value>Over the last couple of months, Belledonne Communications was contacted by a large number of users and clients requesting Linphone's Windows Phone 8 (and 8.1) support. After months of development and hard work, Belledonne Communications is happy to announce that is is launching today Linphone for this promising mobile operating system.

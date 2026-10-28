@@ -534,6 +534,9 @@ namespace Linphone.Views
                 audioDownloadBandwidth = String.Format("{0:0.00}", audioStats.DownloadBandwidth);
                 audioUploadBandwidth = String.Format("{0:0.00}", audioStats.UploadBandwidth);
                 ((InCallModel)ViewModel).ICE = audioStats.IceState.ToString(); 
+                ((InCallModel)ViewModel).LossRate = String.Format("{0:0.0} %", audioStats.LocalLossRate);
+                ((InCallModel)ViewModel).Jitter = String.Format("{0:0.0} ms", audioStats.ReceiverInterarrivalJitter);
+                ((InCallModel)ViewModel).RoundTripDelay = audioStats.RoundTripDelay < 0 ? "-" : String.Format("{0:0} ms", audioStats.RoundTripDelay * 1000);
             }
 
             PayloadType audiopt = param.UsedAudioCodec;

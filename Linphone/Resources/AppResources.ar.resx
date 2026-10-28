@@ -599,6 +599,15 @@ http://www.linphone.org/user-guide.html
   <data name="StatICE" xml:space="preserve">
     <value>توصيل ICE</value>
   </data>
+  <data name="StatJitter" xml:space="preserve">
+    <value>الاهتزاز :</value>
+  </data>
+  <data name="StatLossRate" xml:space="preserve">
+    <value>نسبة الفقد :</value>
+  </data>
+  <data name="StatRoundTripDelay" xml:space="preserve">
+    <value>وقت الذهاب والإياب :</value>
+  </data>
   <data name="AccountMenuSubtitle" xml:space="preserve">
     <value>إعدادات الحساب</value>
   </data>
@@ -667,6 +676,27 @@ http://www.linphone.org/user-guide.html
   </data>
   <data name="UploadingLogs" xml:space="preserve">
     <value>يجري تنزيل السجلات</value>
+  </data>
+  <data name="EchoCancellationSetting" xml:space="preserve">
+    <value>إلغاء الصدى</value>
+  </data>
+  <data name="AudioPortRange" xml:space="preserve">
+    <value>نطاق منافذ RTP للصوت</value>
+  </data>
+  <data name="AudioPortMin" xml:space="preserve">
+    <value>المنفذ الأدنى</value>
+  </data>
+  <data name="AudioPortMax" xml:space="preserve">
+    <value>المنفذ الأقصى</value>
+  </data>
+  <data name="AudioPortRangeError" xml:space="preserve">
+    <value>نطاق المنافذ غير صالح: يجب أن تكون القيمتان بين 1024 و65535، وأن يكون الحد الأدنى أصغر من الحد الأقصى أو مساوياً له.</value>
+  </data>
+  <data name="VideoPortRange" xml:space="preserve">
+    <value>نطاق منافذ RTP للفيديو</value>
+  </data>
+  <data name="VideoPortRangeRestart" xml:space="preserve">
+    <value>يُطبَّق بعد إعادة تشغيل التطبيق</value>
   </data>
   <data name="WindowsPhoneStoreAppDescription" xml:space="preserve">
     <value>خلال الشهور الأخيرة، طلب العديد من المستخدمين والزبناء من شركة  Belledonne Communications إصدار برنامج لِنْفُونْ في ويندوز فون 8 (وكذا 8.1). بعد شهور من التطوير والعمل الشاق، فإن شركة Belledonne Communications سعيدة بالإعلان عن قيامها اليوم بإصدار لِنْفُونْ لأجل نظام تشغيل المحمول الذي وعدت به.

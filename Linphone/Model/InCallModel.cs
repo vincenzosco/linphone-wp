@@ -565,6 +565,42 @@ namespace Linphone.Views
                 this.OnPropertyChanged();
             }
         }
+        public string LossRate
+        {
+            get
+            {
+                return lossRate;
+            }
+            set
+            {
+                lossRate = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public string Jitter
+        {
+            get
+            {
+                return jitter;
+            }
+            set
+            {
+                jitter = value;
+                this.OnPropertyChanged();
+            }
+        }
+        public string RoundTripDelay
+        {
+            get
+            {
+                return roundTripDelay;
+            }
+            set
+            {
+                roundTripDelay = value;
+                this.OnPropertyChanged();
+            }
+        }
         public string ReceivedVideoSize
         {
             get
@@ -625,6 +661,9 @@ namespace Linphone.Views
         private string receivedVideoSize = "";
         private string sentVideoSize = "";
         private string ice = "";
+        private string lossRate = "";
+        private string jitter = "";
+        private string roundTripDelay = "";
         private Visibility videoStatsVisibility = Visibility.Collapsed;
         #endregion
     }

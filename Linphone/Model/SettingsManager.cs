@@ -636,6 +636,7 @@ namespace Linphone.Model
         private const string IsacSettingKeyName = "CodecIsac";
         private const string H264SettingKeyName = "CodecH264";
         private const string VP8SettingKeyName = "CodecVP8";
+        private const string EchoCancellationKeyName = "EchoCancellation";
         #endregion
 
         private String GetKeyNameForCodec(String mimeType, int clockRate)
@@ -692,6 +693,7 @@ namespace Linphone.Model
         {
             LoadCodecs(LinphoneManager.Instance.LinphoneCore.AudioCodecs);
             LoadCodecs(LinphoneManager.Instance.LinphoneCore.VideoCodecs);
+            dict[EchoCancellationKeyName] = LinphoneManager.Instance.LinphoneCore.EchoCancellationEnabled.ToString();
         }
 
         private void SaveCodecs(IList<Object> ptlist)
@@ -713,6 +715,10 @@ namespace Linphone.Model
         {
             SaveCodecs(LinphoneManager.Instance.LinphoneCore.AudioCodecs);
             SaveCodecs(LinphoneManager.Instance.LinphoneCore.VideoCodecs);
+            if (ValueChanged(EchoCancellationKeyName))
+            {
+                LinphoneManager.Instance.LinphoneCore.EchoCancellationEnabled = Convert.ToBoolean(GetNew(EchoCancellationKeyName));
+            }
         }
         #endregion
 
@@ -909,6 +915,21 @@ namespace Linphone.Model
             set
             {
                 Set(IsacSettingKeyName, value.ToString());
+            }
+        }
+
+        /// <summary>
+        /// Is the echo cancellation enabled or disabled ? (Boolean)
+        /// </summary>
+        public bool EchoCancellation
+        {
+            get
+            {
+                return Convert.ToBoolean(Get(EchoCancellationKeyName));
+            }
+            set
+            {
+                Set(EchoCancellationKeyName, value.ToString());
             }
         }
 
@@ -1181,6 +1202,14 @@ namespace Linphone.Model
         private const string TunnelServerKeyName = "TunnelServer";
         private const string TunnelPortKeyName = "TunnelPort";
         private const string TunnelModeKeyName = "TunnelMode";
+        private const string RtpSection = "rtp";
+        private const string AudioPortKeyName = "audio_rtp_port";
+        private const string VideoPortKeyName = "video_rtp_port";
+        private const string AudioPortMinKeyName = "AudioPortMin";
+        private const string AudioPortMaxKeyName = "AudioPortMax";
+        private const string VideoPortMinKeyName = "VideoPortMin";
+        private const string VideoPortMaxKeyName = "VideoPortMax";
+        private const int DefaultVideoPort = 9078;
         #endregion
 
         /// <summary>
@@ -1242,6 +1271,18 @@ namespace Linphone.Model
         /// </summary>
         public void Load()
         {
+            int defaultPort = LinphoneManager.Instance.LinphoneCore.AudioPort;
+            int[] audioPortRange = Config.GetRange(RtpSection, AudioPortKeyName, new int[] { defaultPort, defaultPort });
+            dict[AudioPortMinKeyName] = audioPortRange[0].ToString();
+            dict[AudioPortMaxKeyName] = audioPortRange[1].ToString();
+
+            // The Core exposes no accessor for the video port, so the value configured by liblinphone (or the
+            // one shipped in the configuration file) is read from the configuration itself.
+            int defaultVideoPort = Config.GetInt(RtpSection, VideoPortKeyName, DefaultVideoPort);
+            int[] videoPortRange = Config.GetRange(RtpSection, VideoPortKeyName, new int[] { defaultVideoPort, defaultVideoPort });
+            dict[VideoPortMinKeyName] = videoPortRange[0].ToString();
+            dict[VideoPortMaxKeyName] = videoPortRange[1].ToString();
+
             dict[StunServerKeyName] = LinphoneManager.Instance.LinphoneCore.StunServer;
             dict[FirewallPolicyKeyName] = EnumToFirewallPolicy[LinphoneManager.Instance.LinphoneCore.FirewallPolicy];
             dict[MediaEncryptionKeyName] = EnumToMediaEncryption[LinphoneManager.Instance.LinphoneCore.MediaEncryption];
@@ -1286,6 +1327,23 @@ namespace Linphone.Model
             {
                 string mediaEncryption = GetNew(MediaEncryptionKeyName);
                 LinphoneManager.Instance.LinphoneCore.MediaEncryption = MediaEncryptionToEnum[mediaEncryption];
+            }
+
+            if (ValueChanged(AudioPortMinKeyName) || ValueChanged(AudioPortMaxKeyName))
+            {
+                int minPort = Convert.ToInt32(GetNew(AudioPortMinKeyName));
+                int maxPort = Convert.ToInt32(GetNew(AudioPortMaxKeyName));
+                Config.SetRange(RtpSection, AudioPortKeyName, new int[] { minPort, maxPort });
+                LinphoneManager.Instance.LinphoneCore.SetAudioPortRange(minPort, maxPort);
+            }
+
+            if (ValueChanged(VideoPortMinKeyName) || ValueChanged(VideoPortMaxKeyName))
+            {
+                // Unlike the audio range, the video one can only be stored in the configuration: liblinphone reads
+                // it when the core starts (rtp_config_read), so it is applied at the next application start.
+                int minPort = Convert.ToInt32(GetNew(VideoPortMinKeyName));
+                int maxPort = Convert.ToInt32(GetNew(VideoPortMaxKeyName));
+                Config.SetRange(RtpSection, VideoPortKeyName, new int[] { minPort, maxPort });
             }
 
             // Save tunnel configuration
@@ -1412,6 +1470,66 @@ namespace Linphone.Model
             set
             {
                 Set(TunnelModeKeyName, value);
+            }
+        }
+
+        /// <summary>
+        /// Lower value of the range from which the UDP port used for audio streaming is chosen (String).
+        /// </summary>
+        public string AudioPortMin
+        {
+            get
+            {
+                return Get(AudioPortMinKeyName);
+            }
+            set
+            {
+                Set(AudioPortMinKeyName, value);
+            }
+        }
+
+        /// <summary>
+        /// Upper value of the range from which the UDP port used for audio streaming is chosen (String).
+        /// </summary>
+        public string AudioPortMax
+        {
+            get
+            {
+                return Get(AudioPortMaxKeyName);
+            }
+            set
+            {
+                Set(AudioPortMaxKeyName, value);
+            }
+        }
+
+        /// <summary>
+        /// Lower value of the range from which the UDP port used for video streaming is chosen (String).
+        /// </summary>
+        public string VideoPortMin
+        {
+            get
+            {
+                return Get(VideoPortMinKeyName);
+            }
+            set
+            {
+                Set(VideoPortMinKeyName, value);
+            }
+        }
+
+        /// <summary>
+        /// Upper value of the range from which the UDP port used for video streaming is chosen (String).
+        /// </summary>
+        public string VideoPortMax
+        {
+            get
+            {
+                return Get(VideoPortMaxKeyName);
+            }
+            set
+            {
+                Set(VideoPortMaxKeyName, value);
             }
         }
         #endregion

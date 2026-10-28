@@ -50,7 +50,87 @@
                                 </TextBox.InputScope>
                             </TextBox>
                         </StackPanel>
-                            
+
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock
+                                Style="{StaticResource PhoneTextSubtleStyle}"
+                                Text="{Binding Path=LocalizedResources.AudioPortRange, Source={StaticResource LocalizedStrings}}" />
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    Margin="0,0,10,0"
+                                    Text="{Binding Path=LocalizedResources.AudioPortMin, Source={StaticResource LocalizedStrings}}" />
+
+                                <TextBox
+                                    x:Name="audioPortMin"
+                                    Width="120">
+                                    <TextBox.InputScope>
+                                        <InputScope>
+                                            <InputScopeName NameValue="Number" />
+                                        </InputScope>
+                                    </TextBox.InputScope>
+                                </TextBox>
+
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    Margin="10,0,10,0"
+                                    Text="{Binding Path=LocalizedResources.AudioPortMax, Source={StaticResource LocalizedStrings}}" />
+
+                                <TextBox
+                                    x:Name="audioPortMax"
+                                    Width="120">
+                                    <TextBox.InputScope>
+                                        <InputScope>
+                                            <InputScopeName NameValue="Number" />
+                                        </InputScope>
+                                    </TextBox.InputScope>
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock
+                                Style="{StaticResource PhoneTextSubtleStyle}"
+                                Text="{Binding Path=LocalizedResources.VideoPortRange, Source={StaticResource LocalizedStrings}}" />
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    Margin="0,0,10,0"
+                                    Text="{Binding Path=LocalizedResources.AudioPortMin, Source={StaticResource LocalizedStrings}}" />
+
+                                <TextBox
+                                    x:Name="videoPortMin"
+                                    Width="120">
+                                    <TextBox.InputScope>
+                                        <InputScope>
+                                            <InputScopeName NameValue="Number" />
+                                        </InputScope>
+                                    </TextBox.InputScope>
+                                </TextBox>
+
+                                <TextBlock
+                                    VerticalAlignment="Center"
+                                    Margin="10,0,10,0"
+                                    Text="{Binding Path=LocalizedResources.AudioPortMax, Source={StaticResource LocalizedStrings}}" />
+
+                                <TextBox
+                                    x:Name="videoPortMax"
+                                    Width="120">
+                                    <TextBox.InputScope>
+                                        <InputScope>
+                                            <InputScopeName NameValue="Number" />
+                                        </InputScope>
+                                    </TextBox.InputScope>
+                                </TextBox>
+                            </StackPanel>
+
+                            <TextBlock
+                                Style="{StaticResource PhoneTextSubtleStyle}"
+                                TextWrapping="Wrap"
+                                Text="{Binding Path=LocalizedResources.VideoPortRangeRestart, Source={StaticResource LocalizedStrings}}" />
+                        </StackPanel>
 
                         <StackPanel x:Name="TunnelPanel" Orientation="Vertical">
                             <toolkit:ListPicker 
